@@ -1,0 +1,504 @@
+body {
+    display: grid;
+    grid-template-rows: 60vh auto 140vh auto 60vh 40vh 20vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "header header" "nav nav" "a-la-une a-la-une" "les-plus-populaires derniers-articles" "nos-partenaires nos-partenaires" "explications explications" "footer footer";
+    text-align: center;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+#border {
+    border: 1px solid #2b80b9;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #f2f8ba;
+    border: 1px solid #f2f8ba;
+    border-radius: 8px;
+    color: #2b80b9;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    transition: 0.6s;
+}
+
+button:hover {
+    background-color: #2b80b9;
+    border: 1px solid #2b80b9;
+    color: #f2f8ba;
+}
+
+h1 {
+    color: #2b80b9;
+    font-weight: bold;
+    border-bottom: 1px solid #f2f8ba;
+    padding-bottom: 5px;
+}
+
+/* ==========================  MON HEADER  ==================================== */
+
+header {
+    grid-area: header;
+    background-image: linear-gradient( rgba(116, 230, 214, 0.4), rgba(250, 247, 48, 0.3)), url(images/beach.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo h2 i {
+    font-size: 80px;
+    color: white;
+}
+
+#logo h2 {
+    font-size: 64px;
+    color: white;
+}
+
+#logo p {
+    color: white;
+}
+
+/* ==========================  MA NAV   ==================================== */
+
+nav {
+    grid-area: nav;
+    background-color: #f2f8ba;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20vw;
+    color: #2b80b9;
+    font-weight: bold;
+}
+
+#hamburger {
+    display: none;
+}
+
+#navbarTitle {
+    display: none;
+}
+
+/* ==========================  A LA UNE  ==================================== */
+
+#a-la-une {
+    grid-area: a-la-une;
+    background-image: linear-gradient( rgba(116, 230, 214, 0.4), rgba(250, 247, 48, 0.3)), url(images/bali.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#bloc-a-la-une {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    background-color: #2b80b9;
+    border: 1px solid #2b80b9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1vh;
+    margin-top: 2vh;
+}
+
+#bloc-a-la-une i {
+    font-size: 32px;
+    color: white;
+    margin: 5%;
+}
+
+.text-a-la-une {
+    color: white;
+    font-weight: bold;
+    margin: 2vw;
+}
+
+.forma-a-la-une {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5%;
+}
+
+.forma-bali {
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    border-top: 2px solid #f2f8ba;
+    width: 70%;
+}
+
+/* ==========================  LES PLUS POPULAIRES  ==================================== */
+
+#les-plus-populaires {
+    grid-area: les-plus-populaires;
+    background-color: #2b80b9;
+}
+
+#titre-icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4vh;
+}
+
+#titre-icone i {
+    color: white;
+    font-size: 32px;
+}
+
+#les-plus-populaires h1 {
+    color: white;
+    font-weight: bold;
+}
+
+#bloc-populaires {
+    border: 2px solid #f2f8ba;
+    box-shadow: 5px 5px 5px #f2f8ba;
+    border-radius: 10px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 1vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+#bloc-populaires h4 {
+    color: white;
+    font-size: 16px;
+}
+
+#bloc-auteur2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+#bloc-auteur2 p {
+    font-size: 14px;
+}
+
+#bloc-auteur2 img {
+    height: 35px;
+    border-radius: 100%;
+}
+
+#bloc-auteur2 i {
+    color: white;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.decor-img2 img {
+    width: 15vw;
+    border: 4px solid #f2f8ba;
+    margin-top: 20px;
+}
+
+#bloc-classement {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+
+#bloc-classement i {
+    margin-left: 30%;
+}
+
+#bloc-classement p {
+    display: flex;
+    gap: 5px;
+    font-weight: bold;
+}
+
+/* ==========================  DERNIERS ARTICLES  ==================================== */
+
+#derniers-articles {
+    grid-area: derniers-articles;
+}
+
+.photos-article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.les-photos img {
+    height: 7vw;
+}
+
+#bloc-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#auteur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#auteur p {
+    font-weight: bold;
+    max-width: 50vw;
+}
+
+/*Deuxième article*/
+
+#bloc-auteur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#bloc-auteur img {
+    height: 60px;
+    border-radius: 100%;
+}
+
+#bloc-auteur i {
+    color: #2b80b9;
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.decor-img img {
+    width: 30vw;
+    border: 4px solid #f2f8ba;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* ==========================  NOS PARTENAIRES  ==================================== */
+
+#nos-partenaires {
+    grid-area: nos-partenaires;
+    background-image: linear-gradient( rgba(116, 230, 214, 0.4), rgba(250, 247, 48, 0.3)), url(images/plane.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#titre-icone-partenaires {
+    color: #2b80b9;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4vh;
+}
+
+#bloc-partenaire {
+    color: white;
+}
+
+/* ==========================  EXPLICATIONS  ==================================== */
+
+#explications {
+    grid-area: explications;
+    background-color: #2b80b9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.grosse-icone img {
+    height: 13vw;
+}
+
+.grosse-icone img:hover {
+    height: 16vw;
+    filter: contrast(150%);
+}
+
+.grosse-icone p {
+    color: white;
+    font-weight: bold;
+}
+
+/* ==========================  FOOTER  ==================================== */
+
+footer {
+    grid-area: footer;
+    background-color: #f2f8ba;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #2b80b9;
+}
+
+.icone-reseaux {
+    font-size: 24px;
+}
+
+.icone-reseaux i:hover {
+    transition: 0.6s;
+    color: white;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+/* MEDIA QUERY ================================================ */
+
+@media screen and (max-width: 991px) {
+    body {
+        grid-template-areas: "header header" "" "a-la-une a-la-une" "les-plus-populaires derniers-articles" "nos-partenaires nos-partenaires" "explications explications" "footer footer";
+    }
+    nav {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        opacity: 80%;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul {
+        display: none;
+        gap: 12vw;
+    }
+    #a-la-une {
+        background-attachment: local;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    #bloc-a-la-une {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    #hamburgerAndTitle {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 80vw;
+    }
+    #hamburger {
+        display: block;
+        margin-right: 25%;
+        color: #2b80b9;
+        font-weight: bold;
+    }
+    #navbarTitle {
+        display: block;
+        align-self: center;
+        color: #2b80b9;
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50vh 100vh auto;
+        grid-template-areas: "header header""a-la-une a-la-une" "les-plus-populaires derniers-articles" "nos-partenaires nos-partenaires" "explications explications" "footer footer";
+    }
+    nav ul {
+        gap: 12vw;
+    }
+    .decor-img2 img {
+        width: 38vw;
+        border: 3px solid #f2f8ba;
+        margin-top: 20px;
+    }
+    .decor-img img {
+        width: 45vw;
+        border: 3px solid #f2f8ba;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    #a-la-une {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    #navigationLinks {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: 50vh 110vh auto;
+        grid-template-areas: "header" "a-la-une" "derniers-articles" "les-plus-populaires" "nos-partenaires" "explications" "footer";
+    }
+    .decor-img2 img {
+        width: 80vw;
+        border: 3px solid #f2f8ba;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .decor-img img {
+        width: 80vw;
+    }
+    #explications {
+        flex-direction: column;
+        padding: 5vh;
+    }
+    .grosse-icone img {
+        height: 30vw;
+    }
+    .photos-article {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .les-photos img {
+        height: 55vw;
+    }
+    #a-la-une {
+        grid-template-columns: 5vw repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    #bloc-a-la-une {
+        grid-column: 2/ 3;
+        grid-row: 2 / 3;
+        
+        
+        
+    }
+
+    nav ul {
+        gap: 3vw;
+    }
+
+
+}
